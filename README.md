@@ -42,6 +42,8 @@ SoloPatty integrates secure computing, encrypted trading, and blockchain smart c
 
 ### How SoloPatty Works
 
+<img src="./assets/flow.png"/>
+
 1. **Users deposit tokens** → Smart contract locks funds and emits a deposit event.
 2. **TEE listens** for deposit events and updates the off-chain balance state.
 3. **Users submit encrypted trade intents** (signed & encrypted with the TEE’s public key).
