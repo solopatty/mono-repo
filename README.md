@@ -4,9 +4,9 @@
 
 ## Repository Structure
  We have 3 submodules
- - The `hack` repository is the smart contract repository.
+- The `hack` repository is the smart contract repository.
 - The `ui` repository is the frontend repository.
-- - The `TEE` repository is the NestJS TEE repository.
+- The `TEE` repository is the NestJS TEE repository.
 
 ## Key Features
 
