@@ -26,6 +26,8 @@ SoloPatty integrates secure computing, encrypted trading, and blockchain smart c
 #### Secure Execution & Order Matching
 
 - **Marlin TEE + NestJS** – The backend operates within a Trusted Execution Environment (TEE) using NestJS, ensuring private and tamper-proof order matching.
+  - Job ID: `0x0000000000000000000000000000000000000000000000000000000000000baa`
+  - TEE IP Address: `43.204.7.164`
 
 #### Smart Contracts
 
@@ -40,13 +42,31 @@ SoloPatty integrates secure computing, encrypted trading, and blockchain smart c
 
 - **Next.js + Wagmi + Viem + ShadCN + TailwindCSS** – A modern frontend stack for fast and seamless Web3 interactions.
 
+## 📜 Contracts Deployed
+
+### 🍔 Patty Token
+- **Address:** [`0x126F0c11F3e5EafE37AB143D4AA688429ef7DCB3`](https://sepolia.etherscan.io/address/0x126F0c11F3e5EafE37AB143D4AA688429ef7DCB3)
+- **Description:** Core token in the SoloPatty system, representing the foundational layer of the patty structure.
+
+### 🥬 Lettuce Token
+- **Address:** [`0xF7aE103AacD84641Fa0c43860C23a8Cf7cE5DB5a`](https://sepolia.etherscan.io/address/0xF7aE103AacD84641Fa0c43860C23a8Cf7cE5DB5a)
+- **Description:** Auxiliary token representing freshness or a feature enhancer — like lettuce in a burger analogy.
+
+### 🧀 Cheese Token
+- **Address:** [`0x5D7714751FAf22a96F7D2eAC15304839242cF8c0`](https://sepolia.etherscan.io/address/0x5D7714751FAf22a96F7D2eAC15304839242cF8c0)
+- **Description:** Complementary token for added richness — cheese symbolizes premium features or additional value.
+
+### 🔄 SoloPatty Contract
+- **Address:** [`0xCB30D0881119bA8837A9e26E298d3b73c4c521EC`](https://sepolia.etherscan.io/address/0xCB30D0881119bA8837A9e26E298d3b73c4c521EC)
+- **Description:** The orchestrator smart contract that interacts with Patty, Lettuce, and Cheese tokens to enable composability, swaps, or bundled logic within the SoloPatty ecosystem.
+
 ### How SoloPatty Works
 
 <img src="./assets/flow.png"/>
 
 1. **Users deposit tokens** → Smart contract locks funds and emits a deposit event.
 2. **TEE listens** for deposit events and updates the off-chain balance state.
-3. **Users submit encrypted trade intents** (signed & encrypted with the TEE’s public key).
+3. **Users submit encrypted trade intents** (signed & encrypted with the TEE's public key).
 4. Every minute, the TEE:
    - Decrypts intents
    - Runs a Coincidence of Wants (CoW) matching algorithm
