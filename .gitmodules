@@ -1,0 +1,9 @@
+[submodule "TEE"]
+	path = TEE
+	url = https://github.com/solopatty/TEE.git
+[submodule "hack"]
+	path = hack
+	url = https://github.com/solopatty/hack.git
+[submodule "ui"]
+	path = ui
+	url = https://github.com/solopatty/ui.git
